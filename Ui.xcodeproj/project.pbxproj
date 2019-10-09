@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D04B68C234DE2CE008D20A1 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D04B68B234DE2CE008D20A1 /* PhotoViewController.swift */; };
+		2D04B68E234DEE5E008D20A1 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D04B68D234DEE5E008D20A1 /* PhotoCollectionViewCell.swift */; };
 		2D2F2B5C2344C17A00AD505C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F2B5B2344C17A00AD505C /* AppDelegate.swift */; };
 		2D2F2B5E2344C17A00AD505C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F2B5D2344C17A00AD505C /* ViewController.swift */; };
 		2D2F2B612344C17A00AD505C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D2F2B5F2344C17A00AD505C /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D04B68B234DE2CE008D20A1 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		2D04B68D234DEE5E008D20A1 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		2D2F2B582344C17A00AD505C /* Ui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ui.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D2F2B5B2344C17A00AD505C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D2F2B5D2344C17A00AD505C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				2D2F2B642344C17B00AD505C /* LaunchScreen.storyboard */,
 				2D2F2B672344C17B00AD505C /* Info.plist */,
 				5DBE72962348F1F400A72AC0 /* ImageCollectionViewCell.swift */,
+				2D04B68B234DE2CE008D20A1 /* PhotoViewController.swift */,
+				2D04B68D234DEE5E008D20A1 /* PhotoCollectionViewCell.swift */,
 			);
 			path = Ui;
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DBE72972348F1F400A72AC0 /* ImageCollectionViewCell.swift in Sources */,
+				2D04B68E234DEE5E008D20A1 /* PhotoCollectionViewCell.swift in Sources */,
+				2D04B68C234DE2CE008D20A1 /* PhotoViewController.swift in Sources */,
 				2D2F2B5E2344C17A00AD505C /* ViewController.swift in Sources */,
 				2D2F2B5C2344C17A00AD505C /* AppDelegate.swift in Sources */,
 			);

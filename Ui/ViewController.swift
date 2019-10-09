@@ -14,8 +14,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     @IBOutlet weak var AppleImage: UIImageView!
     
-    var imageArr = [UIImage(named: "apple"), UIImage(named: "apple-1"), UIImage(named: "user")]
-    var textArr = [" is simply dummy text "," is simply text ", " is dummy text "]
+    var imageArr = [UIImage(named: "Brad-Pitt"), UIImage(named: "Ben-Affleck"),UIImage(named: "apple"), UIImage(named: "user")]
+//    var textArr = [" is simply dummy text "," is simply text ", " is dummy text "]
     
     
     
@@ -39,8 +39,23 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "icv", for: indexPath) as! ImageCollectionViewCell
         cell.image.image = imageArr[indexPath.row]
-        cell.label.text = textArr[indexPath.row]
+//        cell.label.text = textArr[indexPath.row]
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath)
+//        let scollImage = storyboard?.instantiateViewController(withIdentifier: "vc") as! PhotoViewController
+//        let scollImage=PhotoViewController()
+//        scollImage.imgArray = self.imageArr as! [UIImage]
+////        scollImage.passedContentOffset = profiles[indexPath.row].file_path
+//        scollImage.passedContentOffset = indexPath
+//        self.navigationController?.pushViewController(scollImage, animated: true)
+        
+        let scollImage = self.storyboard?.instantiateViewController(withIdentifier: "vc") as! PhotoViewController
+        scollImage.imageObject = indexPath
+        scollImage.imgArray = self.imageArr as! [UIImage]
+         self.navigationController?.pushViewController(scollImage, animated: true)
     }
     
 
