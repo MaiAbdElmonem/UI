@@ -257,7 +257,7 @@
                                                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wdo-CD-ofH">
                                                     <rect key="frame" x="8" y="52" width="392" height="761"/>
                                                 </scrollView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mnf-IW-XMh">
+                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mnf-IW-XMh">
                                                     <rect key="frame" x="8" y="52" width="392" height="761"/>
                                                 </imageView>
                                             </subviews>
@@ -273,6 +273,7 @@
                                             <constraint firstAttribute="trailingMargin" secondItem="Mnf-IW-XMh" secondAttribute="trailing" id="lj9-vw-oaz"/>
                                             <constraint firstItem="Wdo-CD-ofH" firstAttribute="leading" secondItem="ZmE-DH-yOh" secondAttribute="leadingMargin" id="mSw-37-3If"/>
                                             <constraint firstItem="Wdo-CD-ofH" firstAttribute="top" secondItem="ZmE-DH-yOh" secondAttribute="topMargin" id="vEq-w8-SPK"/>
+                                            <constraint firstItem="Mnf-IW-XMh" firstAttribute="centerX" secondItem="ZmE-DH-yOh" secondAttribute="centerX" id="xf9-GY-1qN"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="scrollableImage" destination="Mnf-IW-XMh" id="gZR-cH-E0J"/>

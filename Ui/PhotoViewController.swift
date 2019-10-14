@@ -11,19 +11,20 @@ import UIKit
 class PhotoViewController: UIViewController ,UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   
     
-    
     @IBOutlet weak var PhotoCollectioView: UICollectionView!
     var imgArray = [UIImage]()
     var passedContentOffset = IndexPath()
     var imageObject : IndexPath?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.PhotoCollectioView.delegate = self
         self.PhotoCollectioView.dataSource = self
+        
         PhotoCollectioView.isPagingEnabled = true
-        var ImageUrl = imageObject!
+        _ = imageObject!
         self.PhotoCollectioView.scrollToItem(at: imageObject!, at: UICollectionView.ScrollPosition.right, animated: false)
+       
     }
     
 
@@ -44,11 +45,12 @@ class PhotoViewController: UIViewController ,UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! PhotoCollectionViewCell
         cell.scrollableImage.image=imgArray[indexPath.row]
-        
-        
+        cell.config()
         
         return cell
     }
+    
+  
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
@@ -65,9 +67,10 @@ class PhotoViewController: UIViewController ,UICollectionViewDelegate, UICollect
             
             self.PhotoCollectioView.setContentOffset(newOffset, animated: false)
         }, completion: nil)
+        
     }
     
-
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let size = UIScreen.main.bounds
@@ -83,4 +86,5 @@ class PhotoViewController: UIViewController ,UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
+
 }
